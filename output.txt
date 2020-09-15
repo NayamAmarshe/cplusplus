@@ -1,22 +1,11 @@
--2
-3
-0
-7
--1
-1
-Start Index is 1 & end Index is 1 and sum 5
-Start Index is 1 & end Index is 2 and sum 2
-Start Index is 1 & end Index is 3 and sum 9
-Start Index is 1 & end Index is 4 and sum 1
-Start Index is 1 & end Index is 5 and sum 3
-Start Index is 2 & end Index is 2 and sum -3
-Start Index is 2 & end Index is 3 and sum 4
-Start Index is 2 & end Index is 4 and sum -4
-Start Index is 2 & end Index is 5 and sum -2
-Start Index is 3 & end Index is 3 and sum 7
-Start Index is 3 & end Index is 4 and sum -1
-Start Index is 3 & end Index is 5 and sum 1
-Start Index is 4 & end Index is 4 and sum -8
-Start Index is 4 & end Index is 5 and sum -6
-Start Index is 5 & end Index is 5 and sum 2
-9
+1,
+1,2,
+1,2,3,
+1,2,3,4,
+2,
+2,3,
+2,3,4,
+3,
+3,4,
+4,
+10
