@@ -10,8 +10,8 @@ int main()
 #endif
   // Code from here //
 
-  int arr[4] = {1, 2, 3, 4};
-  int n = 4;
+  int arr[10] = {1, 4, 20, 3, 10, 5};
+  int n = 6;
   int maxSumArray = INT_MIN;
   //Next Number
   for (int startIndex = 0; startIndex < n; startIndex++)
