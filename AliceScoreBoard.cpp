@@ -5,7 +5,7 @@ using namespace std;
 string ltrim(const string &);
 string rtrim(const string &);
 vector<string> split(const string &);
-
+ 
 /*
  * Complete the 'climbingLeaderboard' function below.
  *
@@ -15,21 +15,25 @@ vector<string> split(const string &);
  *  2. INTEGER_ARRAY player
  */
 
-vector<int> climbingLeaderboard(vector<int> ranked, vector<int> player) {
-    vector<int>::iterator ip; 
-    ip = std::unique(ranked.begin(), ranked.end());     
+vector<int> climbingLeaderboard(vector<int> ranked, vector<int> player)
+{
+    vector<int>::iterator ip;
+    ip = std::unique(ranked.begin(), ranked.end());
     ranked.resize(std::distance(ranked.begin(), ip));
     int count = 1;
     vector<int> finalAnswer;
-    for (int i = 0; i < player.size(); i++) {
-        for (ip = ranked.begin(); ip != ranked.end(); ++ip) { 
-            if (player[i]<*ip){
-            count ++;
+    for (int i = 0; i < player.size(); i++)
+    {
+        for (ip = ranked.begin(); ip != ranked.end(); ++ip)
+        {
+            if (player[i] < *ip)
+            {
+                count++;
             }
-            cout<<"For Player"<<player[i]<<" and score "<<*ip<<" count is "<<count<<endl;
+            cout << "For Player" << player[i] << " and score " << *ip << " count is " << count << endl;
         }
         finalAnswer.push_back(count);
-        cout<<"Final answer is : "<<finalAnswer[i]<<endl;
+        cout << "Final answer is : " << finalAnswer[i] << endl;
         count = 1;
     }
     return finalAnswer;
@@ -51,7 +55,8 @@ int main()
 
     vector<int> ranked(ranked_count);
 
-    for (int i = 0; i < ranked_count; i++) {
+    for (int i = 0; i < ranked_count; i++)
+    {
         int ranked_item = stoi(ranked_temp[i]);
 
         ranked[i] = ranked_item;
@@ -69,7 +74,8 @@ int main()
 
     vector<int> player(player_count);
 
-    for (int i = 0; i < player_count; i++) {
+    for (int i = 0; i < player_count; i++)
+    {
         int player_item = stoi(player_temp[i]);
 
         player[i] = player_item;
@@ -77,10 +83,12 @@ int main()
 
     vector<int> result = climbingLeaderboard(ranked, player);
 
-    for (int i = 0; i < result.size(); i++) {
+    for (int i = 0; i < result.size(); i++)
+    {
         fout << result[i];
 
-        if (i != result.size() - 1) {
+        if (i != result.size() - 1)
+        {
             fout << "\n";
         }
     }
@@ -92,35 +100,37 @@ int main()
     return 0;
 }
 
-string ltrim(const string &str) {
+string ltrim(const string &str)
+{
     string s(str);
 
     s.erase(
         s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace))));
 
     return s;
 }
 
-string rtrim(const string &str) {
+string rtrim(const string &str)
+{
     string s(str);
 
     s.erase(
         find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
-        s.end()
-    );
+        s.end());
 
     return s;
 }
 
-vector<string> split(const string &str) {
+vector<string> split(const string &str)
+{
     vector<string> tokens;
 
     string::size_type start = 0;
     string::size_type end = 0;
 
-    while ((end = str.find(" ", start)) != string::npos) {
+    while ((end = str.find(" ", start)) != string::npos)
+    {
         tokens.push_back(str.substr(start, end - start));
 
         start = end + 1;
